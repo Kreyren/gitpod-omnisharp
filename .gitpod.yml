@@ -1,0 +1,14 @@
+image: gitpod/workspace-dotnet-vnc
+tasks:
+  - init: csc src/App.cs -r:System.Windows.Forms.dll
+    command: mono App.exe
+ports:
+  - port: 6080
+    onOpen: open-preview
+  - port: 5900
+    onOpen: ignore
+  - port: 35900
+    onOpen: ignore
+vscode:
+  extensions:
+    - ms-dotnettools.csharp@1.22.0:H/UU3ezplPBgjaLNwtevwA==
